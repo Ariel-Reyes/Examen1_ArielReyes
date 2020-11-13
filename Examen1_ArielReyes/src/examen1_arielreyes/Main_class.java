@@ -20,13 +20,13 @@ public class Main_class extends javax.swing.JFrame {
      */
     public Main_class() {
         initComponents();
-        
+
         DefaultComboBoxModel model_estado = (DefaultComboBoxModel) cb_estado_vida.getModel();
         model_estado.addElement(new estado_vida("Viva"));
         model_estado.addElement(new estado_vida("Desaparecida"));
         cb_estado_vida.setModel(model_estado);
         cb_estado_vida1.setModel(model_estado);
-        
+
         DefaultComboBoxModel model_arma = (DefaultComboBoxModel) cb_armas.getModel();
         model_arma.addElement(new armas("Hacha", 30));
         model_arma.addElement(new armas("Pistola", 25));
@@ -133,35 +133,53 @@ public class Main_class extends javax.swing.JFrame {
         jTextArea3 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 102, 102));
+
+        jPanel2.setForeground(new java.awt.Color(255, 153, 153));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 51, 51));
         jLabel1.setText("Campistas");
 
+        jLabel2.setForeground(new java.awt.Color(51, 153, 255));
         jLabel2.setText("Nombre: ");
 
+        jLabel3.setForeground(new java.awt.Color(0, 153, 255));
         jLabel3.setText("Edad: ");
 
+        jLabel4.setForeground(new java.awt.Color(0, 153, 255));
         jLabel4.setText("Sexo: ");
 
         buttonGroup1.add(rd_hombre);
+        rd_hombre.setForeground(new java.awt.Color(51, 0, 51));
         rd_hombre.setText("Hombre");
 
         buttonGroup1.add(rd_mujer);
         rd_mujer.setText("Mujer");
 
+        jLabel5.setForeground(new java.awt.Color(51, 0, 51));
         jLabel5.setText("Armas: ");
 
+        cb_armas.setBackground(new java.awt.Color(204, 255, 255));
+
+        jLabel6.setForeground(new java.awt.Color(0, 102, 204));
         jLabel6.setText("Tipo campista: ");
 
         buttonGroup2.add(rd_supervisores);
+        rd_supervisores.setForeground(new java.awt.Color(51, 0, 51));
         rd_supervisores.setText("Supervisores");
 
         buttonGroup2.add(rd_campistas);
+        rd_campistas.setForeground(new java.awt.Color(51, 0, 51));
         rd_campistas.setText("Campistas");
 
+        jLabel7.setForeground(new java.awt.Color(102, 0, 51));
         jLabel7.setText("Estado de vida: ");
 
+        cb_estado_vida.setBackground(new java.awt.Color(204, 255, 255));
+
+        jButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Ingresar ");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,13 +215,12 @@ public class Main_class extends javax.swing.JFrame {
                                     .addComponent(jLabel3))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel1)
                                     .addComponent(jTextField1)
                                     .addComponent(jFormattedTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(211, 211, 211)
+                        .addGap(197, 197, 197)
                         .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(cb_armas, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel7)
@@ -212,8 +229,13 @@ public class Main_class extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(261, 261, 261))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(261, 261, 261))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(265, 265, 265))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,17 +266,20 @@ public class Main_class extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(jLabel7)
                     .addComponent(cb_estado_vida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
         );
 
         jTabbedPane2.addTab("Campistas", jPanel2);
 
+        jLabel8.setForeground(new java.awt.Color(204, 51, 0));
         jLabel8.setText("Nombre: ");
 
+        jLabel9.setForeground(new java.awt.Color(204, 51, 0));
         jLabel9.setText("Edad: ");
 
+        jLabel10.setForeground(new java.awt.Color(153, 51, 0));
         jLabel10.setText("Sexo: ");
 
         buttonGroup1.add(rd_hombre1);
@@ -263,14 +288,19 @@ public class Main_class extends javax.swing.JFrame {
         buttonGroup1.add(rd_mujer1);
         rd_mujer1.setText("Mujer");
 
+        jLabel11.setBackground(new java.awt.Color(255, 102, 0));
         jLabel11.setText("Armas: ");
+
+        cb_armas1.setBackground(new java.awt.Color(204, 255, 255));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 0, 0));
         jLabel12.setText("SHEISON");
 
+        jLabel13.setForeground(new java.awt.Color(204, 51, 0));
         jLabel13.setText("Victimas: ");
 
+        jButton2.setBackground(new java.awt.Color(0, 204, 204));
         jButton2.setText("Ingresar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -311,12 +341,15 @@ public class Main_class extends javax.swing.JFrame {
                         .addGap(347, 347, 347))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel13))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(129, 129, 129))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jFormattedTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(129, 129, 129))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(277, 277, 277))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -355,12 +388,19 @@ public class Main_class extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Sheison", jPanel3);
 
+        jLabel20.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(0, 102, 102));
         jLabel20.setText("Seleccione el campista a modificar: ");
 
+        cb_cam.setBackground(new java.awt.Color(204, 255, 255));
+
+        jLabel21.setForeground(new java.awt.Color(0, 153, 153));
         jLabel21.setText("Nombre: ");
 
+        jLabel22.setForeground(new java.awt.Color(0, 102, 102));
         jLabel22.setText("Edad: ");
 
+        jLabel23.setForeground(new java.awt.Color(0, 153, 153));
         jLabel23.setText("Sexo: ");
 
         buttonGroup1.add(rd_hombre3);
@@ -369,6 +409,7 @@ public class Main_class extends javax.swing.JFrame {
         buttonGroup1.add(rd_mujer3);
         rd_mujer3.setText("Mujer");
 
+        jLabel24.setForeground(new java.awt.Color(0, 153, 153));
         jLabel24.setText("Tipo campista: ");
 
         buttonGroup2.add(rd_supervisores1);
@@ -377,10 +418,17 @@ public class Main_class extends javax.swing.JFrame {
         buttonGroup2.add(rd_campistas1);
         rd_campistas1.setText("Campistas");
 
+        jLabel25.setForeground(new java.awt.Color(0, 153, 153));
         jLabel25.setText("Armas: ");
 
+        cb_armas3.setBackground(new java.awt.Color(204, 255, 255));
+
+        jLabel26.setForeground(new java.awt.Color(0, 102, 102));
         jLabel26.setText("Estado de vida: ");
 
+        cb_estado_vida1.setBackground(new java.awt.Color(204, 255, 255));
+
+        jButton4.setBackground(new java.awt.Color(153, 204, 255));
         jButton4.setText("Modificar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -393,28 +441,27 @@ public class Main_class extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(256, 256, 256)
-                        .addComponent(jLabel20))
+                        .addComponent(jLabel23)
+                        .addGap(18, 18, 18)
+                        .addComponent(rd_hombre3)
+                        .addGap(29, 29, 29)
+                        .addComponent(rd_mujer3)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(160, 160, 160)
+                        .addComponent(jLabel22)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jFormattedTextField7))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel21)
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jLabel23)
-                                .addGap(18, 18, 18)
-                                .addComponent(rd_hombre3)
-                                .addGap(29, 29, 29)
-                                .addComponent(rd_mujer3)
+                                .addComponent(jLabel20)
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jLabel22)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jFormattedTextField7))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jLabel21)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField4)))))
+                            .addComponent(jTextField4))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -426,24 +473,21 @@ public class Main_class extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(rd_campistas1))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(168, 168, 168)
+                        .addGap(117, 117, 117)
                         .addComponent(jLabel25)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cb_armas3, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
+                        .addComponent(cb_armas3, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                        .addComponent(jButton4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel26)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(cb_estado_vida1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(cb_cam, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(270, 270, 270))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jButton4)
-                        .addGap(285, 285, 285))))
+                .addComponent(cb_cam, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(269, 269, 269))
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel4Layout.createSequentialGroup()
                     .addGap(245, 245, 245)
@@ -455,9 +499,9 @@ public class Main_class extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel20)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cb_cam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(22, 22, 22)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -480,25 +524,31 @@ public class Main_class extends javax.swing.JFrame {
                     .addComponent(cb_armas3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel25)
                     .addComponent(jLabel26)
-                    .addComponent(cb_estado_vida1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4)
+                    .addComponent(cb_estado_vida1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel4Layout.createSequentialGroup()
                     .addGap(138, 138, 138)
                     .addComponent(jFormattedTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(163, Short.MAX_VALUE)))
+                    .addContainerGap(165, Short.MAX_VALUE)))
         );
 
         jTabbedPane2.addTab("Modificar compista", jPanel4);
 
-        jLabel14.setText("Modificar");
+        jLabel14.setFont(new java.awt.Font("Tahoma", 2, 24)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel14.setText("Modificar a los Sheisons");
 
+        jLabel15.setForeground(new java.awt.Color(102, 102, 0));
         jLabel15.setText("Nombre: ");
 
+        jLabel16.setForeground(new java.awt.Color(102, 102, 0));
         jLabel16.setText("edad: ");
 
+        cb_mod_shison.setBackground(new java.awt.Color(204, 255, 255));
+
+        jLabel17.setForeground(new java.awt.Color(102, 153, 0));
         jLabel17.setText("Sexo: ");
 
         buttonGroup1.add(rd_hombre2);
@@ -525,47 +575,48 @@ public class Main_class extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(203, 203, 203)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jLabel16)
-                                .addGap(18, 18, 18)
-                                .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 28, Short.MAX_VALUE))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel14)
-                                    .addComponent(cb_mod_shison, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(325, 325, 325))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addGap(18, 18, 18)
+                        .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel17)
                             .addComponent(jLabel15)
                             .addComponent(jLabel18))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(rd_hombre2, javax.swing.GroupLayout.Alignment.TRAILING))
+                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jButton3))
+                                    .addComponent(cb_armas2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                        .addGap(14, 14, 14)
+                                        .addComponent(rd_hombre2))
+                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(cb_mod_shison, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel5Layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
                                         .addComponent(rd_mujer2))
                                     .addGroup(jPanel5Layout.createSequentialGroup()
-                                        .addGap(128, 128, 128)
+                                        .addGap(110, 110, 110)
                                         .addComponent(jLabel19)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jFormattedTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel5Layout.createSequentialGroup()
-                                        .addGap(10, 10, 10)
-                                        .addComponent(jButton3))
-                                    .addComponent(cb_armas2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                        .addComponent(jFormattedTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addContainerGap(48, Short.MAX_VALUE))))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(171, 171, 171)
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -593,7 +644,7 @@ public class Main_class extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
                     .addComponent(cb_armas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addContainerGap())
         );
@@ -658,9 +709,9 @@ public class Main_class extends javax.swing.JFrame {
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 669, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addContainerGap(20, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
@@ -758,6 +809,7 @@ public class Main_class extends javax.swing.JFrame {
             ((elsheison) per).setPersonas(victimas);
 
             JOptionPane.showMessageDialog(this, "Modificado!");
+            
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Error");
@@ -889,21 +941,21 @@ public class Main_class extends javax.swing.JFrame {
         if (jTabbedPane1.getSelectedIndex() == 1 && jTabbedPane3.getSelectedIndex() == 0) {
 
             for (Personas p : campis_vida) {
-                jTextArea1.append(cont + ")" + p + "," + p.getSexo() + "," + p.getArma() + " , " + ((campistas) p).getEstado_vida() + " ," + ", " + ((campistas) p).getTipo_campista() + "\n");
+                jTextArea1.append(cont + ") Nombre: " + p + " ,Sexo: " + p.getSexo() + " ,Arma " + p.getArma() + " ,Estado de vida " + ((campistas) p).getEstado_vida() + " ," + ", Tipo campista" + ((campistas) p).getTipo_campista() + "\n");
                 cont = cont + 1;
             }
 
         }
         if (jTabbedPane1.getSelectedIndex() == 1 && jTabbedPane3.getSelectedIndex() == 1) {
             for (Personas a : asesinos) {
-                jTextArea2.append(cant + " )" + a + "," + a.getSexo() + "," + a.getArma() + ", " + ((elsheison) a).getPersonas());
+                jTextArea2.append(cant + " ) Nombre" + a + " , Sexo: " + a.getSexo() + ", Armas: " + a.getArma() + ", Personas asesinadas" + ((elsheison) a).getPersonas() + "\n");
                 cant = cant + 1;
             }
         }
 
         if (jTabbedPane1.getSelectedIndex() == 1 && jTabbedPane3.getSelectedIndex() == 2) {
             for (Personas f : campis_desa) {
-                jTextArea3.append(cont + ")" + f + "," + f.getSexo() + "," + f.getArma() + " , " + ((campistas) f).getEstado_vida() + " ," + ", " + ((campistas) f).getTipo_campista() + "\n");
+                jTextArea3.append(cont + ") Nombre: " + f + " ,Sexo" + f.getSexo() + " ,Armas" + f.getArma() + " , Estado de vida" + ((campistas) f).getEstado_vida() + " ," + ", Tipo de campista" + ((campistas) f).getTipo_campista() + "\n");
                 cant = cant + 1;
             }
         }
@@ -922,7 +974,7 @@ public class Main_class extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
