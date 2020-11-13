@@ -40,7 +40,7 @@ public class armas {
 
     @Override
     public String toString() {
-        return "armas{" + "tipo_arma=" + tipo_arma + ", daño=" + daño + '}';
+        return tipo_arma;
     }
 
 
