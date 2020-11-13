@@ -13,28 +13,29 @@ import java.util.ArrayList;
  */
 public class elsheison extends Personas {
 
-    ArrayList<Personas> victamas = new ArrayList();
+    int personas;
 
     public elsheison() {
         super();
+
     }
 
-    public elsheison(String nombre, int edad, String sexo, armas arma, ArrayList<Personas> victamas) {
+    public elsheison(int personas, String nombre, int edad, String sexo, armas arma) {
         super(nombre, edad, sexo, arma);
-        this.victamas = victamas;
+        this.personas = personas;
     }
 
-    public ArrayList<Personas> getVictamas() {
-        return victamas;
+    public int getPersonas() {
+        return personas;
     }
 
-    public void setVictamas(ArrayList<Personas> victamas) {
-        this.victamas = victamas;
+    public void setPersonas(int personas) {
+        this.personas = personas;
     }
 
     @Override
     public String toString() {
-        return "elsheison{" + "victamas=" + victamas + '}';
+        return nombre;
     }
 
 }

@@ -24,8 +24,6 @@ public class campistas extends Personas {
         this.estado_vida = estado_vida;
     }
 
-    
-
     public String getTipo_campista() {
         return tipo_campista;
     }
@@ -44,7 +42,7 @@ public class campistas extends Personas {
 
     @Override
     public String toString() {
-        return "campistas{" + "tipo_campista=" + tipo_campista + ", estado_vida=" + estado_vida + '}';
+        return nombre;
     }
 
 }
