@@ -20,7 +20,7 @@ public class Main_class extends javax.swing.JFrame {
      */
     public Main_class() {
         initComponents();
-
+ // aca se esta creando lo que llevaran nuestro combobox
         DefaultComboBoxModel model_estado = (DefaultComboBoxModel) cb_estado_vida.getModel();
         model_estado.addElement(new estado_vida("Viva"));
         model_estado.addElement(new estado_vida("Desaparecida"));
@@ -790,20 +790,20 @@ public class Main_class extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
 
-        try {
+        try { // creamos a un campista 
             Personas per = (Personas) cb_mod_shison.getSelectedItem();
             String nombre = jTextField2.getText();
             per.setNombre(nombre);
             int edad = Integer.parseInt(jFormattedTextField3.getText());
             per.setEdad(edad);
             String sexo = "";
-            if (rd_hombre2.isSelected()) {
+            if (rd_hombre2.isSelected()) { // hacemos uno de los botones de esta forma 
                 sexo = "Masculino";
             } else {
                 sexo = "Femenino";
             }
             per.setSexo(sexo);
-            armas ar = (armas) cb_armas2.getSelectedItem();
+            armas ar = (armas) cb_armas2.getSelectedItem(); // agarramos el objeto seleccionado en nuestro combobox 
             per.setArma(ar);
             int victimas = Integer.parseInt(jFormattedTextField5.getText());
             ((elsheison) per).setPersonas(victimas);
@@ -818,7 +818,7 @@ public class Main_class extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-
+        
         try { Personas camp = (Personas) cb_cam.getSelectedItem();
             String nombre = jTextField4.getText();
             camp.setNombre(nombre);
@@ -852,25 +852,25 @@ public class Main_class extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         try {
-
+ // creamos un sheison de esta forma, a cada variable le pasamos el valor que se ingrese en la textBox
             String nombre = jTextField3.getText();
             int edad = Integer.parseInt(jFormattedTextField2.getText());
             String sexo = "";
-            if (rd_hombre1.isSelected()) {
+            if (rd_hombre1.isSelected()) { // hacemos uso de los botones de esta forma 
                 sexo = "Masculino";
 
             } else {
                 sexo = "Femenino";
             }
-            armas arm = (armas) cb_armas1.getSelectedItem();
+            armas arm = (armas) cb_armas1.getSelectedItem(); // agarramos el objeto seleccionado en nuestro comboBox 
             int persona = Integer.parseInt(jFormattedTextField4.getText());
 
-            elsheison asesino = new elsheison(persona, nombre, edad, sexo, arm);
+            elsheison asesino = new elsheison(persona, nombre, edad, sexo, arm); // creeamos el objeto
 
             asesinos.add(asesino);
             DefaultComboBoxModel asesi = (DefaultComboBoxModel) cb_mod_shison.getModel();
             asesi.addElement(asesino);
-            cb_mod_shison.setModel(asesi);
+            cb_mod_shison.setModel(asesi); // aca estamos almacenando los valores en un textBox
 
             JOptionPane.showMessageDialog(this, "REGISTRADO!");
             jTextField3.setText("");
@@ -885,25 +885,26 @@ public class Main_class extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         try{
+             // aca estamos creando un nuevo campista 
             String nombre = jTextField1.getText();
             int edad =  Integer.parseInt(jFormattedTextField1.getText());
             String sexo = "";
-            if(rd_hombre.isSelected()){
+            if(rd_hombre.isSelected()){ // lo de los botones 
                 sexo = "Masculino";
             } else {
                 sexo = "Femenimo";
             }
 
             String tipo_campista = "";
-            if (rd_supervisores.isSelected()) {
+            if (rd_supervisores.isSelected()) { // botones con los tipos de campistas 
                 tipo_campista = "Supervisor";
 
             } else {
                 tipo_campista = "Campista";
             }
-            String estado_vida = cb_estado_vida.getSelectedItem().toString();
+            String estado_vida = cb_estado_vida.getSelectedItem().toString(); // se agarra la seleccion del combobox 
              armas arm = (armas) cb_armas.getSelectedItem();
-            if(estado_vida.equals("Desaparecida")){
+            if(estado_vida.equals("Desaparecida")){ // estamos validando por si esta viva o desaperecida la persona 
                 campistas cam = new campistas(tipo_campista, estado_vida, nombre, edad, sexo, arm);
                 campis_desa.add(cam); 
             }
@@ -933,6 +934,7 @@ public class Main_class extends javax.swing.JFrame {
 
     private void jTabbedPane3StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane3StateChanged
         // TODO add your handling code here:
+        // aca lo que estamos haciendo es crear las actualizaciones el los TextArea y estos se modificaran y actualizaran cada vez que ingresemos a ellas 
         jTextArea1.setText("");
         jTextArea2.setText("");
         jTextArea3.setText("");
@@ -997,6 +999,7 @@ public class Main_class extends javax.swing.JFrame {
             }
         });
     }
+    // aca es la creacion de los arreglos 
  private ArrayList<Personas> campis = new ArrayList(); 
   private ArrayList<Personas> campis_desa = new ArrayList(); 
   private ArrayList<Personas> campis_vida = new ArrayList(); 
